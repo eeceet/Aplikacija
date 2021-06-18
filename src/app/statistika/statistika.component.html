@@ -1,0 +1,15 @@
+<input type="text" id="myInput" placeholder="Add points.." [(ngModel)]="poeni">
+<input type="text" id="myInput" placeholder="Add minutes.." [(ngModel)]="minuti">
+<input type="text" id="myInput" placeholder="Add a name.." [(ngModel)]="name">
+
+<button (click)="addStatistika()" *ngIf="!isUpdate">add statistika</button>
+<button (click)="updateStatistika()" *ngIf="isUpdate">update statistika</button>
+<br>
+
+<ul id="names">
+    <li *ngFor="let statistika of filteredStatistika">
+        <p>{{statistika.poeni }} - {{statistika.minuti}} - {{statistika.name}} - {{statistika.id}}</p>
+        <button (click)="remove(statistika.id)">delete a player:</button>
+        <button (click)="update(statistika)">update a player:</button>
+    </li>
+</ul>

@@ -1,0 +1,5 @@
+<input type="text" id="myInput" placeholder="Add a Takmicar.." [(ngModel)]="filteredString">
+<button (click) = "addTakmicar()">add takmicar</button>
+<ul id="names">
+    <li *ngFor="let name of filteredNames"><p>{{name}}</p></li>
+</ul>

@@ -1,0 +1,11 @@
+<input type="text" id="myInput" placeholder="Search for names../Add Leagues.." [(ngModel)]="filteredString">
+<button (click)="doSearch()">do search</button>
+<br>
+<button (click) = "addLeague()">add league</button>
+<!--<button (click) = "updateTrener()">update trener:</button>-->
+
+<ul id="names">
+    <li *ngFor="let q of filteredNames">
+    <p>{{q}}</p></li>
+<!--   <button (click) = "update(nameList)">update trener:</button>-->
+</ul>
